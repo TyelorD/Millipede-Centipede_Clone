@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="Game Settings">
+        <com.klein.tyelor.tkleinmillipede.NumberPickerPreference
+            android:key="@string/prefs_SnakeSegs"
+            android:title="# of Snake Segs (5-15)"
+            android:summary="10"
+            android:defaultValue="10"
+            custom:max="15"
+            custom:min="5"
+            custom:wrap="false"/>
+        <com.klein.tyelor.tkleinmillipede.NumberPickerPreference
+            android:key="@string/prefs_NumRocks"
+            android:title="# of Rocks (5-25)"
+            android:summary="15"
+            android:defaultValue="15"
+            custom:max="25"
+            custom:min="5"
+            custom:wrap="false"/>
+        <com.klein.tyelor.tkleinmillipede.NumberPickerPreference
+            android:key="@string/prefs_NumLives"
+            android:title="# of Lives (1-3)"
+            android:summary="3"
+            android:defaultValue="3"
+            custom:max="3"
+            custom:min="1"
+            custom:wrap="false"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Extra Game Settings">
+        <com.klein.tyelor.tkleinmillipede.NumberPickerPreference
+            android:key="@string/prefs_PlayerSpeed"
+            android:title="Player Update Delay"
+            android:summary="85ms"
+            android:defaultValue="85"
+            custom:max="150"
+            custom:min="50"
+            custom:wrap="true"/>
+        <com.klein.tyelor.tkleinmillipede.NumberPickerPreference
+            android:key="@string/prefs_SnakeSpeed"
+            android:title="Snake Update Delay"
+            android:summary="5 ~165ms"
+            android:defaultValue="5"
+            custom:max="5"
+            custom:min="3"
+            custom:wrap="false"/>
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/prefs_ResetOnDeath"
+            android:title="Reset on Death"
+            android:summary="Yes pause and reset when I die"/>
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="@string/prefs_SnakeNum"
+            android:title="Double the snakes, double the fun?"
+            android:summary="No fun for you..."/>
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/prefs_PowerUpsOn"
+            android:title="Allow Power-ups?"
+            android:summary="Lives will fall from the heavens!"/>
+        <com.klein.tyelor.tkleinmillipede.NumberPickerPreference
+            android:key="@string/prefs_PowerUpsSpeed"
+            android:title="Power-up Update Delay"
+            android:summary="16 ~528ms"
+            android:defaultValue="16"
+            custom:max="30"
+            custom:min="5"
+            custom:wrap="false"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Sound Settings">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/prefs_PlaySounds"
+            android:title="Play Sounds?"
+            android:summary="Sounds are on"/>
+        <com.klein.tyelor.tkleinmillipede.NumberPickerPreference
+            android:key="@string/prefs_SoundVolume"
+            android:title="Sound Volume"
+            android:summary="50%"
+            android:defaultValue="50"
+            custom:max="100"
+            custom:min="0"
+            custom:wrap="true"/>
+    </PreferenceCategory>
+</PreferenceScreen>
